@@ -2,11 +2,13 @@ import express from "express";
 import { checkDatabaseConnection } from "./src/config/prisma.js";
 import dotenv from "dotenv";
 import cors from 'cors'
+import { userRouter } from "./src/routes/users.route.js";
+import { authRouter } from "./src/routes/auth.route.js";
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(cors());
 
@@ -28,6 +30,8 @@ app.get("/databaseHealthCheck", async (req, res) => {
 
 
 //routes list
+app.use('/api/user',userRouter);
+app.use('/api/auth',authRouter);
 
 
 
