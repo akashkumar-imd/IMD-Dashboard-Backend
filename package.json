@@ -1,0 +1,26 @@
+{
+  "name": "imd-dashboard-backend",
+  "version": "1.0.0",
+  "description": "managing campaign",
+  "license": "ISC",
+  "author": "IMD-TECH",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.7.0",
+    "axios": "^1.9.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2-promise": "^0.1.4",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.7.0"
+  }
+}
